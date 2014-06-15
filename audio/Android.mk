@@ -13,6 +13,7 @@
 # limitations under the License.
 
 ifeq ($(findstring omap, $(TARGET_BOARD_PLATFORM)),omap)
+ifneq ($(filter ovation,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 
@@ -59,4 +60,5 @@ LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
 
+endif
 endif
